@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: indoor-navigation/Dockerfile
+    ports:
+      - "3001:5173"  # Map port 3001 on host to port 80 in the container
+
+  # backend:
+  #   build:
+  #     context: .
+  #     dockerfile: IndoorBackEnd/Dockerfile
+  #   ports:
+  #     - "8001:8000"  # Map port 8000 on host to port 9000 in the container
+  #   environment:
+  #     - APP_URL=http://localhost:8000
+  #     - VITE_LARAVEL_URL=http://localhost:8000
+  #   volumes:
+  #     - ./IndoorBackEnd/public:/var/www/html/public  # Mount the public directory
