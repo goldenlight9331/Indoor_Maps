@@ -1,0 +1,62 @@
+.category-box {
+  height: 400px; /* Adjust height as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  font-weight: 300px;
+}
+a {
+  color: #fff !important;
+}
+.custom-button {
+  background-color: #a0153e; /* Your desired background color */
+  border-color: #a0153e; /* Border color same as background color for consistency */
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.custom-button:hover {
+  background-color: blue; /* Change background color on hover */
+  border-color: blue; /* Change border color on hover */
+}
+.custom-button:active {
+  transform: scale(0.95); /* Shrink button size on click */
+}
+/* Modify the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Track (the background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px; /* Color of the track */
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #a0153e;
+  backdrop-filter: blur(5px);
+  border-radius: 10px; /* Color of the thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0153e;
+  backdrop-filter: blur(5px); /* Color of the thumb on hover */
+}
+
+.bg-image {
+  background-image: url("../category/backgroundCategory.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

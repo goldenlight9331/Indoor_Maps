@@ -1,0 +1,101 @@
+.module-class-body {
+  background-color: #3d0c11;
+  background-image: url("image/bgimage.png");
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+}
+
+.module-login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.module-login-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.module-login-container form input[type="text"],
+.module-login-container form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.module-login-container form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3d0c11;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.module-login-container form button:hover {
+  background-color: #3d0c11;
+}
+
+.module-btn-login {
+  position: relative;
+}
+
+.module-btn-login::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.module-btn-login:hover::after {
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.module-btn-login span {
+  position: relative;
+  z-index: 1;
+}
+
+.module-input-text {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.module-input-text:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff;
+}
+
+/* Add other styles as needed */
+
+:export {
+  module-class-body: module-class-body;
+  module-login-container: module-login-container;
+  module-btn-login: module-btn-login;
+  module-input-text: module-input-text;
+}

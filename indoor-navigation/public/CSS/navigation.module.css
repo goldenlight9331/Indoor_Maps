@@ -1,0 +1,95 @@
+/* styles.module.css */
+
+.navigation-bg {
+  background-image: url("../img/navigation3.png");
+  background-size: 100vw 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-repeat: no-repeat;
+}
+
+.start-navigation-btn {
+  border-radius: 10px;
+  background: #92003b;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 1000px;
+  color: #fff;
+  font-family: Laila;
+}
+
+.card-content {
+  color: #92003b;
+  font-family: Laila;
+  font-weight: 200px;
+}
+.card-content p {
+  color: black;
+  font-family: Laila;
+}
+
+.shoes-img {
+  height: 300px;
+  width: 300px;
+  border-radius: 2rem;
+}
+.container-navigation {
+  margin-top: 300px;
+  max-width: 40vw;
+  align-self: center;
+}
+
+.card {
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+.start-navigation-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  max-width: 60%;
+}
+
+.start-navigation-btn:hover {
+  background-color: #92003b;
+  color: white;
+  font-weight: 700;
+}
+
+/* Export classes */
+:export {
+  navigation-bg: navigation-bg;
+  start-navigation-btn: start-navigation-btn;
+  card-content: card-content;
+  shoes-img: shoes-img;
+  container-navigation: container-navigation;
+  card: card;
+}

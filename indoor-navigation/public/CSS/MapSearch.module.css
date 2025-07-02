@@ -1,0 +1,86 @@
+/* Search input and bar styles */
+.search-input {
+  width: 100% !important;
+  max-width: 80% !important;
+  padding: 5px !important;
+  margin-top: 15px !important;
+  box-sizing: border-box !important;
+}
+
+.floor-search-bar {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+  position: relative; /* Ensure parent container is relative for absolute dropdown positioning */
+}
+
+/* Suggestions dropdown styles */
+.suggestions-dropdown {
+  position: absolute; /* Changed from relative */
+  top: 100%; /* Adjusted for overlay positioning */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10; /* Ensure it overlays above other content */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  animation: slideDown 0.7s ease forwards;
+}
+
+.suggestions-dropdown.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.suggestions-dropdown li {
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestions-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Animation keyframes */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Company list styles */
+.companies-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.company-item {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.company-item:hover {
+  background-color: #f0f0f0;
+}

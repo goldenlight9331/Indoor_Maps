@@ -1,0 +1,71 @@
+/* CSS/slider.css */
+
+.floor-numbers {
+  position: absolute;
+  
+  bottom: 15vh; /* Adjust this value to move the buttons up or down */
+  left: 20px; /* Adjust this value to move the buttons left or right */
+
+  z-index: 1000; /* Ensure the buttons appear on top of the image */
+
+}
+
+.floor-buttons {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+
+  height: 150px; /* Fixed height for the floor-numbers */
+
+  overflow-y: auto; /* Adds a scrollbar if content exceeds height */
+}
+
+.floor-buttons::-webkit-scrollbar{
+  display: none;
+}
+
+
+.slide {
+  display: flex;
+  flex-direction: column; /* Stack button and text vertically */
+  margin-bottom: 5px; /* Add some space between slides */
+}
+
+.floor-text {
+  color: grey;
+  text-align: center;
+}
+
+.slide button {
+  width: 40px;
+  height: 40px;
+  margin: 2px 5px !important;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 16px;
+  text-align: cent  er;
+
+  color: grey;
+  background-color: white;
+  
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slide button.active {
+  background-color: #2f74b5; /* Blue color for active button */
+  color: white;
+}
+
+.slide button.active:hover {
+  background-color: #1d5a8d; /* Darker blue on hover for active button */
+  transform: scale(1.1);
+}
+
+@media (orientation: portrait) {
+  
+  .floor-numbers { 
+    bottom: 10vh; /* Adjust this value to move the buttons up or down */  
+  }
+}

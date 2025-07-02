@@ -1,0 +1,156 @@
+/* companies.css */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+h1 {
+  color: #333;
+}
+
+/* Search input styles */
+.search-wrapper {
+  position: relative;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Suggestions dropdown styles */
+.suggestions-dropdown {
+  position: absolute; /* Ensure dropdown is positioned absolutely within the parent */
+  top: 100%; /* Position directly below the search input */
+  left: 0;
+  
+  width: 100%;
+  
+  background-color: #fff;
+  opacity: 0;
+  
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  list-style-type: none;
+  
+  padding: 0;
+  margin: 0;
+  
+  z-index: 10; /* Ensure dropdown appears above other content */
+  
+  transform: translateY(-10px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  animation: slideDown 0.7s ease forwards;
+}
+
+.suggestions-dropdown.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.suggestions-dropdown li {
+  padding: 20px; /* Adjust padding for consistency */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestions-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Company list styles */
+.companies-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.company-item {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.company-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Animation keyframes */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer styles */
+.bottom-container {
+  position: absolute; /* Fix position at the bottom of the viewport */
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background */
+}
+
+.round-link {
+  margin: 0 10px;
+  color: white;
+}
+
+/* Align categories in a row and ensure consistent height */
+.category-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent text from wrapping */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove default list styling */
+}
+
+/* Hide scrollbar but allow horizontal scrolling */
+.category-list::-webkit-scrollbar {
+  display: none;
+}
+
+.category-list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Align each category item in the middle */
+.category-item {
+  display: inline-flex; /* Keep items in a single row */
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+/* Ensure category text is centered */
+.category-item div {
+  margin-top: 10px;
+  font-size: 16px;
+  color: white;
+}

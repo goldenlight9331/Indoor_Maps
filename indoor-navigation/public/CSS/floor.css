@@ -1,0 +1,293 @@
+/* Style for the zoom control buttons */
+.leaflet-control-zoom a {
+  color: black; /* Color for the + and - icons */
+  background-color: white; /* Background color for the buttons */
+  border: 2px solid #ccc; /* Border to make the buttons more visible */
+  font-size: 18px; /* Size of the + and - icons */
+  width: 30px; /* Button width */
+  height: 30px; /* Button height */
+  line-height: 30px; /* Vertically centers the icons */
+  text-align: center; /* Centers the + and - icons */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  border-radius: 4px; /* Optional rounded corners */
+  margin: 0; /* Ensures no extra margin */
+  padding: 0; /* Ensures no extra padding */
+  position: relative; /* Avoids any displacement */
+  overflow: hidden; /* Ensures no extra content spills out */
+}
+
+/* Manually set the + and - icons */
+.leaflet-control-zoom-in::before,
+.leaflet-control-zoom-out::before {
+  content: ""; /* Clear default icons or extra content */
+}
+
+.leaflet-control-zoom-in::before {
+  content: "+"; /* Add + icon */
+  font-weight: bold; /* Make it stand out */
+  display: block;
+  color: gray;
+}
+
+.leaflet-control-zoom-out::before {
+  content: "-"; /* Add - icon */
+  font-weight: bold; /* Make it stand out */
+  display: block;
+  color: gray;
+}
+
+/* Ensure no extra elements are displayed */
+.leaflet-control-zoom a::after {
+  display: none; /* Hides any potential additional content */
+}
+
+/* Optional hover effect */
+.leaflet-control-zoom a:hover {
+  background-color: #f0f0f0;
+  border-color: #aaa;
+}
+
+/* Style to ensure the extra white square doesn't appear */
+.leaflet-control-zoom {
+  background: none !important;
+}
+
+
+
+.floor-container {
+  display: flex;
+  flex-direction: row;
+
+  padding: 0;
+  margin: 0;
+
+  height: 100vh;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+
+  z-index: 1; /* Adjust as needed */
+
+}
+
+
+/* Default styles for buttons */
+.button {
+  margin: 5px;
+  padding: 5px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* side-ads css */
+
+.ads-box{
+  height: 40%;
+}
+
+.promotion-box{
+  height: 40%;
+}
+
+.ads {
+  width: 100%;
+  height: 100%;
+  object-fit:cover; /* This will ensure the image is cropped properly */
+}
+
+.promotion {
+  width: 100%;
+  height: 100%;
+  object-fit:cover; /* This will ensure the image is cropped properly */
+}
+
+.button-section{
+  min-height: 80px;
+  height: 10%;
+
+  width: 100%;
+}
+
+
+.btn-venue{
+  background-color: #b74113;
+  color: white;
+  width: 100%;
+  height: 100%;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+.btn-venue:hover{
+  background-color: #de602e;
+  color: white;
+}
+
+
+@media (orientation: landscape) and (min-height: 900px) {
+  .ads-box{
+    height: 41%;
+  }
+  
+  .promotion-box{
+    height: 41%;
+  }
+
+  .button-section {
+    height: 8%;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 1050px) {
+  .ads-box{
+    height: 41%;
+  }
+  
+  .promotion-box{
+    height: 41.5%;
+  }
+
+  .button-section {
+    height: 7.5%;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 1100px) {
+  .ads-box{
+    height: 41%;
+  }
+  
+  .promotion-box{
+    height: 42%;
+  }
+
+  .button-section {
+    height: 7%;
+  }
+}
+
+@media (orientation: landscape) and (min-height: 1200px) {
+  .ads-box{
+    height: 43%;
+  }
+  
+  .promotion-box{
+    height: 42%;
+  }  
+
+  .button-section {
+    height: 5%;
+  }
+
+  .btn-venue{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+}
+
+
+@media (orientation: landscape) and (min-height: 1200px) {
+  .ads-box{
+    height: 44%;
+  }
+  
+  .promotion-box{
+    height: 43%;
+  }  
+
+  .button-section {
+    height: 3%;
+  }
+
+  .btn-venue{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+}
+
+.side-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  
+  width: 25%;
+  height: 100%;
+
+  min-width: 400px;
+
+  background-color: #232b2b;
+
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-out;
+  
+  z-index: 1000;
+
+  overflow-y: auto;
+}
+
+.side-drawer.open {
+  right: 0;
+}
+
+.close-drawer {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.top-container {
+  position: sticky;
+  top: 0;
+  background-color: #232b2b;
+  z-index: 100;
+  padding-bottom: 10px;
+}
+
+
+.btn-select {
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  position: relative;
+  text-align: left;
+  color: #495057;
+
+  width: 100% !important;
+  max-width: 80% !important;
+  padding: 5px !important;
+  margin-top: 15px !important;
+  box-sizing: border-box !important;
+
+}
+
+.btn-select::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.875rem;
+  color: #495057;
+}
+
+
+@media (orientation: portrait) {
+  
+  .floor-container {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+  } 
+}

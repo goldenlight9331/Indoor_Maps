@@ -1,0 +1,127 @@
+.Backgorund-image {
+  background-image: url("../img/bg3.png");
+  background-size: 100vw 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  height: 100vh;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-color: #92003b;
+}
+
+*::selection {
+  background-color: #92003b;
+  color: white;
+}
+.bg-color {
+  background-color: #92003b;
+  height: auto;
+}
+
+.explore__area {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.explore-btn-top {
+  animation: slideInTop 1s ease-in-out;
+}
+
+.explore-btn-bottom {
+  animation: slideInBottom 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Define the animation */
+@keyframes buttonAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to buttons */
+.explore-btn {
+  animation: buttonAnimation 1s infinite;
+}
+
+.buttons a {
+  background-color: #4278ac;
+  color: white;
+}
+
+.buttons a:hover {
+  background-color: #a0153e;
+  font-weight: bold;
+  color: white;
+}
+.buttons a:active {
+  background-color: #a0153e;
+  font-weight: bold;
+}
+.animated-menu {
+  animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dropdown animation */
+.animated-dropdown .menu-item {
+  opacity: 5;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.animated-dropdown .menu-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.animated-dropdown .menu-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.animated-dropdown .menu-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.animated-dropdown .menu-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.animated-dropdown .menu-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.animated-dropdown .menu-item:hover {
+  opacity: 1;
+  transform: translateY(0);
+}
