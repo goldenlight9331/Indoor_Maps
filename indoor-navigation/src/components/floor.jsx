@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { faCircle, faSquareParking, faTaxi, faUserTie, faElevator, faChildReaching, faStairs, faSignInAlt, faMoneyBillAlt, faToilet, faRestroom, faSignOutAlt, faStar, faInfoCircle, faBatteryFull, faPoundSign } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { renderToStaticMarkup } from "react-dom/server";
+// import { faCircle, faSquareParking, faTaxi, faUserTie, faElevator, faChildReaching, faStairs, faSignInAlt, faMoneyBillAlt, faToilet, faRestroom, faSignOutAlt, faStar, faInfoCircle, faBatteryFull, faPoundSign } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { renderToStaticMarkup } from "react-dom/server";
 
 import {
   getLevels,
