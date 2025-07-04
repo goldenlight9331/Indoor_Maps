@@ -1418,7 +1418,7 @@ export default function Floor() {
 
               <div className="col-9" style={{position: "relative"}}>
       
-                <div class="row">
+                <div className="row">
                   <img style={{width: '100%', height: '10vh', objectFit: 'cover'}} src={bannerImageUrl} alt="banner" />
                 </div>
 
@@ -1505,16 +1505,16 @@ export default function Floor() {
                     
                     <Clock city={(misc.length > 0) && misc[0].city} dayImage={(misc.length > 0) && misc[0].day_image} nightImage={(misc.length > 0) && misc[0].night_image} textColor={(themes.length > 0) && themes[0].color} />
 
-                    <div class="ads-box">
+                    <div className="ads-box">
                       <img className="ads" src={adImageUrl} alt="ads" />
                     </div>
 
-                    <div class="promotion-box">
+                    <div className="promotion-box">
                       <img className="promotion" src={promotionImageUrl} alt="promotion" />
                     </div>
 
                     
-                    <div class="button-section">
+                    <div className="button-section">
                       <button className="btn-venue" style={{backgroundColor: (themes.length > 0) && themes[0].browse_venue_ribbon_color, color: (themes.length > 0) && themes[0].browse_venue_text_color}} onClick={toggleDrawer}>
                         Browse Venue
                       </button>
@@ -1529,7 +1529,7 @@ export default function Floor() {
             
               <div style={{position: 'relative'}}>
 
-                <div class="row">
+                <div className="row">
                   <img style={{width: '100%', height: '5vh', objectFit: 'cover'}} src={bannerImageUrl} alt="banner" />
                 </div>
       
